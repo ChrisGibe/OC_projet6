@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Projet 6 OpenclassRooms - Jeu de plateau</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <h1>Battle of Poros</h1>
+      </div>
+      <div class="model-container">
+        <div class="model">
+          <div class="details-player-one">
+            <span>Player One</span>
+            <span id="life-player-one">Life : 100</span>
+            <span id="dmg-player-one">Damage : 10</span>
+            <span id="posture-player-one">Posture : Attack</span>
+            <span id="spell-player-one"><img src="" alt="spell player one" /></span>
+          </div>
+          <div id="player-one-img"></div>
+          <div class="buttons-player-one">
+            <button class="cast">Cast spell</button>
+            <button class="shield">Shield</button>
+          </div>
+        </div>
+        <div class="model">
+          <div class="details-player-two">
+            <span>Player Two</span>
+            <span id="life-player-two">100 : Life</span>
+            <span id="dmg-player-two">10 : Damage</span>
+            <span id="posture-player-two">Attack : Posture</span>
+            <span id="spell-player-two"><img src="" alt="spell player two" /></span>
+          </div>
+          <div id="player-two-img"></div>
+          <div class="buttons-player-two">
+            <button class="cast">Cast spell</button>
+            <button class="shield">Shield</button>
+          </div>
+        </div>
+      </div>
+      <div class="choose-avatars">
+        <h2>
+          Choose<br />
+          your 2 Poros
+        </h2>
+        <ul>
+          <li>
+            <input type="checkbox" id="myCheckbox1" required />
+            <label for="myCheckbox1"><img src="" /></label>
+          </li>
+          <li>
+            <input type="checkbox" id="myCheckbox2" required />
+            <label for="myCheckbox2"><img src="" /></label>
+          </li>
+          <li>
+            <input type="checkbox" id="myCheckbox3" required />
+            <label for="myCheckbox3"><img src="" /></label>
+          </li>
+          <li>
+            <input type="checkbox" id="myCheckbox4" required />
+            <label for="myCheckbox4"><img src="" /></label>
+          </li>
+        </ul>
+        <button class="begin">Play !</button>
+      </div>
+      <div id="game-container">
+        <div id="board"></div>
+      </div>
+      <div class="footer">
+        &copy;
+        <script>
+          new Date().getFullYear() > 2010 && document.write(new Date().getFullYear());
+        </script>
+        <a href="https://www.gibelli-christophe.com" target="_blank">GIBELLI Christophe</a>
+        <span>FRONT END Developer</span>
+      </div>
+    </div>
+    <script type="module" src="app.bundle.js"></script>
+  </body>
+</html>
