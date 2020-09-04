@@ -13,6 +13,9 @@ class Game {
     this.numberOfCell = 0;
   }
 
+  /**
+   * Method to construct the board for the HTML page
+   */
   showBoard() {
     let htmlBoard = document.getElementById("board");
 
@@ -54,11 +57,18 @@ class Game {
       });
   }
 
+  /**
+   * Method for start the Game
+   */
   startGame() {
     let playerStart = this.players[Math.floor(Math.random() * this.players.length)];
     this.authorizedMovement(playerStart);
   }
 
+  /**
+   * Method for check where the player can move.
+   * @param {Object} player - The player who play his turn
+   */
   authorizedMovement(player) {
     if (player.movement === 0 && player.name === this.players[1].name) {
       player.movement = 3;
@@ -143,6 +153,10 @@ class Game {
     }
   }
 
+  /**
+   * Method to execute an action of attack or defense of the player when he click in a specific button.
+   * @param {Object} player - The player who play is turn
+   */
   fight(player) {
     document.querySelector(".buttons-player-one .cast").onclick = () => {
       this.players[0].attack(this.players);
@@ -163,7 +177,6 @@ class Game {
     } else if (player.name === "Player two") {
       document.querySelector(".buttons-player-two").style.visibility = "visible";
     }
-    console.log(player.name + " lance le combat !");
   }
 }
 

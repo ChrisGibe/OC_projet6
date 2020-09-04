@@ -1,4 +1,12 @@
+/** Class representing a Player */
 class Player {
+  /**
+   * Create a player
+   * @param {Sring} name - The name of the player
+   * @param {Number} life - The life of the player
+   * @param {String} img - The image of the player
+   */
+  
   constructor(name, life, img) {
     this.y = "";
     this.x = "";
@@ -12,6 +20,12 @@ class Player {
     this.equipedWeapon = {};
   }
 
+  /**
+   * Method for moving a player on the board
+   * @param {Object} cell - The cell where the player have clicked to move
+   * @param {Array<Object>} arrayOfCell - The array of all the cells
+   * @param {Sring} direction - The diection where the player is moving
+   */
   move(cell, arrayOfCell, direction) {
     let oldPosition = arrayOfCell.find((cell) => cell.player.name === this.name);
 
@@ -51,6 +65,11 @@ class Player {
     arrayOfCell.map((cell) => (cell.move = false));
   }
 
+  /**
+   * Method for to equip or to unequip the player of a weapon.
+   * @param {Object} cell - The cell where the player is 
+   * @param {Object} player - The player who play his turn
+   */
   equipWeapon(cell, player) {
     let damageHtmlPlayerOne = document.querySelector("#dmg-player-one");
     let damageHtmlPlayerTwo = document.querySelector("#dmg-player-two");
@@ -88,6 +107,10 @@ class Player {
     }
   }
 
+  /**
+   * Method to attack another player
+   * @param {Array<Object>} arrayOfPlayers - The array of all the players 
+   */
   attack(arrayOfPlayers) {
     let playerOne = arrayOfPlayers[0];
     let playerTwo = arrayOfPlayers[1];
@@ -119,6 +142,10 @@ class Player {
     }
   }
 
+  /**
+   * Method to choose a defensive posture.
+   * @param {Array<Object>} arrayOfPlayers - The arrat of all the players 
+   */
   defense(arrayOfPlayers) {
     let playerOne = arrayOfPlayers[0];
     let playerTwo = arrayOfPlayers[1];

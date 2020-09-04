@@ -2,10 +2,10 @@
 class Board {
   /**
    * Create a Board
-   * @param {number} cell_x - The number of line
-   * @param {number} cell_y - The number of column
-   * @param {number} cellNotAvailable - The total of available cell
-   * @param {array} arrayOfCell - Empty Array
+   * @param {Number} cell_x - The number of line
+   * @param {Number} cell_y - The number of column
+   * @param {Number} cellNotAvailable - The total of available cell
+   * @param {Array} arrayOfCell - Empty Array
    *
    */
 
@@ -16,7 +16,12 @@ class Board {
     this.arrayOfCell = [];
   }
 
-  /** @method createBoard */
+  
+  /**
+   * Method for create and push all the cells object white the weapons and players.
+   * @param {Array<Object>} arrayOfWeapons - The array of all the weapons
+   * @param {Array<Object>} arrayOfPlayers - THe array of all the players
+   */
   createBoard(arrayOfWeapons, arrayOfPlayers) {
     for (let x = 0; x < this.cell_x; x += 1) {
       for (let y = 0; y < this.cell_y; y += 1) {
@@ -83,6 +88,14 @@ class Board {
     }
   }
 
+  /**
+   * Method for check the position of the two players on board. 
+   * If return true, the 2 players are side by side.
+   * @param {Number} playerOne_x - The x position of the player one
+   * @param {Number} playerOne_y - The y position of the player one
+   * @param {Number} playerTwo_x - The x position of the player two
+   * @param {Number} playerTwo_y - The y position of the player two
+   */
   checkPlayersPosition(playerOne_x, playerOne_y, playerTwo_x, playerTwo_y) {
     const diff_X = Math.abs(playerOne_x - playerTwo_x);
     const diff_Y = Math.abs(playerOne_y - playerTwo_y);
