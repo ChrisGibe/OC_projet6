@@ -2,9 +2,9 @@
 class Player {
   /**
    * Create a player
-   * @param {Sring} name - The name of the player
-   * @param {Number} life - The life of the player
-   * @param {String} img - The image of the player
+   * @param {Sring} name - The name of the player.
+   * @param {Number} life - The life of the player.
+   * @param {String} img - The image of the player.
    */
   
   constructor(name, life, img) {

@@ -1,0 +1,3 @@
+[0904/173941.008:ERROR:process_reader_win.cc(151)] SuspendThread: Accès refusé. (0x5)
+[0904/173941.009:ERROR:exception_snapshot_win.cc(99)] thread ID 4820 not found in process
+[0904/173941.009:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentative d’accès à un processus en cours d’arrêt. (0xc000010a)
